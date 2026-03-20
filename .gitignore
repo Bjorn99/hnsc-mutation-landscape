@@ -12,3 +12,6 @@ wheels/
 data/*.txt
 data/*.tsv
 
+data/clean_*.tsv
+data/oncoplot_matrix.csv
+data/hnsc_tcga/

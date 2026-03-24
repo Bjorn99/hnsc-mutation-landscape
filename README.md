@@ -140,7 +140,7 @@ This was my first independent computational biology project — built from publi
 
 - **Two-thirds of the top 25 mutated genes are probably noise.** Only 8 of 25 are established cancer drivers. The rest are large genes catching random mutations. Without knowing this, a raw frequency table would be misleading.
 
-- **Missing data lies.** cBioPortal encodes missing values as the string `[Not Available]` instead of null. Pandas counts these as valid data. A column that appears 100% complete might actually be 78% missing. I caught this and it informed every downstream decision.
+- **Missing data.** cBioPortal encodes missing values as the string `[Not Available]` instead of null. Pandas counts these as valid data. A column that appears 100% complete might actually be 78% missing. I caught this and it informed every downstream decision.
 
 - **Small sample sizes hide real biology.** PIK3CA enrichment in HPV-positive tumors is one of the most replicated findings in head and neck cancer. My analysis couldn't detect it with 35 HPV-positive samples. "Not significant" doesn't mean "Not real".
 

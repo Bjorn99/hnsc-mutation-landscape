@@ -94,7 +94,7 @@ hnsc-mutation-landscape/
 │   ├── 05_cooccurrence.py        # Figure 3
 │   └── 06_hpv_comparison.py      # Figure 4
 ├── notebooks/
-│   ├── exploration.ipynb         # Data exploration (Day 3)
+│   ├── exploration.ipynb         # Data exploration
 │   ├── oncoplot_dev.ipynb        # Oncoplot development
 │   ├── cooccurrence_dev.ipynb    # Co-occurrence development
 │   └── hpv_dev.ipynb             # HPV analysis development

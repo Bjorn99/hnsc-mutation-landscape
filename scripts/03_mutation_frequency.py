@@ -66,6 +66,7 @@ plt.figure(figsize=(10, 12))
 bars = top25_data.plot(kind='barh', color=colors, edgecolor='black', linewidth=0.5)
 plt.title(f'Top 25 Mutated Genes in HNSC\nNon-silent mutations, hypermutators excluded\n(n={total_samples} samples)', fontsize=14, fontweight='bold', pad=20)
 plt.xlabel('% Non-hypermutated Primary Samples Mutated', fontsize=12)
+plt.xlim(0, 80)
 plt.axvline(x=15, color='red', linestyle='--', alpha=0.7, label='15% threshold')
 legend_elements = [
     Patch(facecolor='darkred', edgecolor='black', label='Known drivers'),

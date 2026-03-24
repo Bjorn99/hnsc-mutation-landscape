@@ -5,6 +5,8 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D
 
 # TOP MUTATED GENES
 print("HNSC TOP MUTATED GENES")
@@ -65,7 +67,12 @@ bars = top25_data.plot(kind='barh', color=colors, edgecolor='black', linewidth=0
 plt.title(f'Top 25 Mutated Genes in HNSC\nNon-silent mutations, hypermutators excluded\n(n={total_samples} samples)', fontsize=14, fontweight='bold', pad=20)
 plt.xlabel('% Non-hypermutated Primary Samples Mutated', fontsize=12)
 plt.axvline(x=15, color='red', linestyle='--', alpha=0.7, label='15% threshold')
-plt.legend(['Passenger/Large genes', 'Known drivers'], loc='lower right')
+legend_elements = [
+    Patch(facecolor='darkred', edgecolor='black', label='Known drivers'),
+    Patch(facecolor='lightgreen', edgecolor='black', label='Passenger/Large genes'),
+    Line2D([0], [0], color='red', linestyle='--', label='15% threshold')
+]
+plt.legend(handles=legend_elements, loc='center right', fontsize=10)
 plt.tight_layout()
 
 
